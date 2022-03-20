@@ -37,6 +37,9 @@ struct FCarData : public FTableRowBase
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "CarData")
 	TEnumAsByte<ECarType> Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "CarData")
+	UTexture2D* Image = nullptr;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "CarData")
 	UStaticMesh* Mesh = nullptr;
