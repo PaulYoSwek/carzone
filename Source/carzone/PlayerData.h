@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonData.h"
+#include "CommonVehicleData.h"
 
 #include "PlayerData.generated.h"
 

@@ -3,19 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonData.h"
 
 #include "PlayerGameData.generated.h"
-
-USTRUCT(BlueprintType)
-struct FVehicleData
-{
-	GENERATED_BODY()
-
-	FCarData CarData;
-
-	//Add possible attachments?
-};
 
 UCLASS(BlueprintType)
 class CARZONE_API UPlayerGameData : public UObject

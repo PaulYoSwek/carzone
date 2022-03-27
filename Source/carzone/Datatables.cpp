@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "CommonData.h"
+#include "Datatables.h"
 
-CommonData::CommonData()
+Datatables::Datatables()
 {
 }
 
-CommonData::~CommonData()
+Datatables::~Datatables()
 {
 }

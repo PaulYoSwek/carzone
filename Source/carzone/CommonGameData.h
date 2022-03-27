@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonData.h"
+#include "Datatables.h"
 
 #include "CommonGameData.generated.h"
 
@@ -15,8 +15,8 @@ class CARZONE_API UCommonGameData : public UObject
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UDataTable* AllVehiclesDT;
+	UDataTable* AllCarsDT;
 
 	UFUNCTION(BlueprintCallable)
-	TArray<FCarData> GetAllVehicles() const;
+	TArray<FVehicleDataRow> GetAllCarsData();
 };

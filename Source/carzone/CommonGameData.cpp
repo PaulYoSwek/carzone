@@ -3,22 +3,26 @@
 
 #include "CommonGameData.h"
 
-TArray<FCarData> UCommonGameData::GetAllVehicles() const
+TArray<FVehicleDataRow> UCommonGameData::GetAllCarsData()
 {
 
-	TArray<FCarData> all_vehicles;
+	TArray<FVehicleDataRow> all_cars;
 	FString context_string;
 	
-	if(ensure(IsValid(AllVehiclesDT) == false))
+	if(!ensure(IsValid(AllCarsDT)))
 	{
-	 	return TArray<FCarData>();
+	 	return TArray<FVehicleDataRow>();
 	}
 	
-	 for (const auto& name : AllVehiclesDT->GetRowNames())
-	 {
-	 	const FCarData* car_data = AllVehiclesDT->FindRow<FCarData>(name, context_string);
-	 	all_vehicles.Add(*car_data);
-	 }
+	for (auto& name : AllCarsDT->GetRowNames())
+	{
+		FVehicleDataRow* car_data = AllCarsDT->FindRow<FVehicleDataRow>(name, context_string);
+
+		if(car_data != nullptr)
+		{
+			all_cars.Add(*car_data);
+		}
+	}
 	
-	 return all_vehicles;
+	return all_cars;
 }
