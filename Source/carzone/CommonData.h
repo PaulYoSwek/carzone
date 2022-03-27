@@ -30,11 +30,23 @@ struct FWheelData
 	//WheelSize, friction, IsShootable, what kind of attack the wheel has or trail it leaves behind
 };
 
+UENUM(BlueprintType)
+enum VehicleID
+{
+	Tank1      UMETA(DisplayName = "TankHarry"),
+	Speed1     UMETA(DisplayName = "SpeedyStevy"),
+	Support1   UMETA(DisplayName = "SupportLans"),
+	Tank2      UMETA(DisplayName = "SuperTanker"),
+};
+
 USTRUCT(BlueprintType)
 struct FCarData : public FTableRowBase
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "CarData")
+	TEnumAsByte<VehicleID> ID;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "CarData")
 	TEnumAsByte<ECarType> Type;
 
