@@ -34,6 +34,9 @@ struct FVehicleData
 	TEnumAsByte<VehicleID> ID;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TEnumAsByte<ECarType> VehicleType;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UTexture2D* Icon;
 
 	//Add more common vehicle data here

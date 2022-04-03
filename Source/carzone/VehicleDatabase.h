@@ -7,6 +7,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "CommonVehicleData.h"
 #include "VehicleBase.h"
+#include "AssetsPaths.h"
 
 #include "VehicleDatabase.generated.h"
 
@@ -18,16 +19,14 @@ struct FVehicleDataRow : public FTableRowBase
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TEnumAsByte<ECarType> VehicleType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVehicleData CommonVehicleDataRow;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AVehicleBase> Vehicle;
-};
 
-#define TABLE_CHARACTER_DATABASE TEXT("/Content/DataTables/DT_CarVariants.DT_CarVariants'")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> PaperDoll;
+};
 
 UCLASS()
 class CARZONE_API UVehicleDatabase : public UGameInstanceSubsystem

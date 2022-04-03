@@ -41,7 +41,5 @@ TArray<FVehicleDataRow> UVehicleDatabase::GetAllVehiclesData()
 
 void UVehicleDatabase::LoadDatabase()
 {
-	// FSoftObjectPath vehicle_datatable_path = FSoftObjectPath(TEXT("/DataTables/DT_CarVariants.DT_CarVariants"));
-	// //"D:\PersonalProjects\carzone\Content\DataTables\DT_CarVariants.uasset"
-	// m_Database = Cast<UDataTable>(vehicle_datatable_path.ResolveObject());
+	m_Database = LoadObject<UDataTable>(nullptr, TABLE_VEHICLE_DATABASE);
 }
