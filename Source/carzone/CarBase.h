@@ -14,7 +14,7 @@ class CARZONE_API ACarBase : public AVehicleBase
 
 public:
 	ACarBase();
-	
+
 	virtual void Tick(float DeltaTime) override;
 
 protected:

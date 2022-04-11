@@ -14,7 +14,7 @@ ACarBase::ACarBase()
 	SpringArm->SetupAttachment(Body);
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
-	
+
 	PrimaryActorTick.bCanEverTick = true;
 }
 
